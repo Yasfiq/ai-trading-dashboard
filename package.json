@@ -1,0 +1,39 @@
+{
+  "name": "ai-trading-dashboard",
+  "version": "1.0.0",
+  "description": "AI Trading Signal Dashboard with Risk-First Architecture",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build:client": "vite build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "server": "tsx src/backend/server.ts",
+    "simulator": "tsx src/backend/simulator/tick_feeder.ts"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "autoprefixer": "^10.6.2",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.7.3",
+    "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.4.0",
+    "@fastify/static": "^9.3.0",
+    "@fastify/websocket": "^11.3.6",
+    "@types/ws": "^8.18.2",
+    "fastify": "^5.12.7",
+    "lightweight-charts": "^5.2.1",
+    "lucide-react": "^1.66.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "ws": "^8.22.1"
+  }
+}
