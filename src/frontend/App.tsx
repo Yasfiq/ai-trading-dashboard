@@ -114,8 +114,9 @@ export default function App() {
     let pingInterval: NodeJS.Timeout;
 
     const connectWs = () => {
-      const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-      const wsUrl = `${protocol}//${window.location.host}/ws`;
+      const wsHost = import.meta.env.VITE_WS_HOST || (window.location.hostname.endsWith('.vercel.app') ? 'organisations-ppm-caribbean-silent.trycloudflare.com' : window.location.host);
+      const protocol = window.location.protocol === 'https:' || wsHost.includes('trycloudflare.com') ? 'wss:' : 'ws:';
+      const wsUrl = `${protocol}//${wsHost}/ws`;
       ws = new WebSocket(wsUrl);
 
       ws.onopen = () => {

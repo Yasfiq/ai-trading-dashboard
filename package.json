@@ -4,6 +4,7 @@
   "description": "AI Trading Signal Dashboard with Risk-First Architecture",
   "type": "module",
   "scripts": {
+    "build": "vite build",
     "test": "vitest run",
     "test:watch": "vitest",
     "build:client": "vite build",
